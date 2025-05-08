@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-Run Errands Services</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0096FF',
+secondary: '#FF0000'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-white min-h-screen">
+<header class="bg-primary">
+<nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="bg-white p-2 rounded-lg">
+<img src="https://static.readdy.ai/image/77a5bdb8d4e30bfbf48244e0258b689c/ffa5a1924d9fe2705745968a96e34283.png" alt="M-Run Errands Services Logo" class="h-16">
+</div>
+<div class="flex items-center space-x-8">
+<a href="#services" class="text-white hover:text-gray-200 cursor-pointer">Services</a>
+<a href="#about" class="text-white hover:text-gray-200 cursor-pointer">About</a>
+<a href="#contact" class="text-white hover:text-gray-200 cursor-pointer">Contact</a>
+<button onclick="showRequestForm()" class="bg-secondary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap">
+Request Delivery
+</button>
+</div>
+</nav>
+</header>
+<main>
+<section class="bg-primary text-white py-20">
+<div class="container mx-auto px-4 flex items-center">
+<div class="w-1/2 pr-12">
+<h1 class="text-5xl font-bold mb-6">Your Reliable Partner for Swift Deliveries</h1>
+<p class="text-xl mb-8">We specialize in fast, secure, and efficient delivery services within the city.</p>
+<div class="flex items-center space-x-4 mb-8">
+<div class="flex items-center">
+<i class="ri-time-line ri-2x mr-2"></i>
+<span>Mon-Sat: 8AM - 8PM</span>
+</div>
+<div class="bg-secondary px-4 py-1 !rounded-button">OPEN NOW</div>
+</div>
+<button onclick="showRequestForm()" class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 cursor-pointer whitespace-nowrap">
+Start Your Request
+</button>
+</div>
+<div class="w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/b96d2ab4cdcb8925aee5162b6e266e29.jpg"
+alt="Delivery Service"
+class="w-full rounded-lg object-cover">
+</div>
+</div>
+</section>
+<section id="services" class="py-20">
+<div class="container mx-auto px-4">
+<h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
+<div class="grid grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-truck-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Direct Deliveries</h3>
+<p class="text-gray-600">Fast and reliable delivery service within the city limits with real-time tracking.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-shopping-bag-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Errands & Pick-ups</h3>
+<p class="text-gray-600">We handle your shopping, document collection, and other errands efficiently.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-shield-check-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold mb-4">Quality Assurance</h3>
+<p class="text-gray-600">Professional handling with guaranteed safety and security of your items.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="bg-gray-50 py-20">
+<div class="container mx-auto px-4">
+<div class="flex items-center">
+<div class="w-1/2 pr-12">
+<h2 class="text-4xl font-bold mb-6">Why Choose Us?</h2>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-timer-line ri-2x text-primary"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
+<p class="text-gray-600">Quick and efficient delivery service with guaranteed timely arrival.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-secure-payment-line ri-2x text-primary"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Secure Handling</h3>
+<p class="text-gray-600">Your items are handled with utmost care and security.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-customer-service-2-line ri-2x text-primary"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">24/7 Support</h3>
+<p class="text-gray-600">Round-the-clock customer support for all your queries.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/abc8b959dea43a7bca87ab98d324134a.jpg"
+alt="Our Operations"
+class="w-full rounded-lg object-cover">
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20">
+<div class="container mx-auto px-4">
+<h2 class="text-4xl font-bold text-center mb-16">Get in Touch</h2>
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<p class="text-gray-600">Phone</p>
+<p class="font-bold">+254 704 108 559 / +254 768 630 497</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<p class="text-gray-600">Email</p>
+<p class="font-bold">mrunerrands@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<p class="text-gray-600">Address</p>
+<p class="font-bold">Nairobi CBD, Kenya</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-6">Send us a Message</h3>
+<form id="contactForm" class="space-y-4">
+<div>
+<input type="text" placeholder="Your Name" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary">
+</div>
+<div>
+<input type="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary">
+</div>
+<div>
+<textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary"></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap">
+Send Message
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-4 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">M-Run Errands</h3>
+<p class="text-gray-400">Your trusted partner for reliable delivery services in Nairobi.</p>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Services</h3>
+<ul class="space-y-2">
+<li class="text-gray-400">Direct Deliveries</li>
+<li class="text-gray-400">Errands & Pick-ups</li>
+<li class="text-gray-400">Quality Assurance</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">&copy; 2025 M-Run Errands. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<div id="requestFormModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+<div class="bg-white rounded-lg p-8 max-w-md w-full">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-2xl font-bold">Request Delivery</h3>
+<button onclick="hideRequestForm()" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<form id="requestForm" class="space-y-4">
+<div>
+<label class="block text-gray-700 mb-2">Pickup Location <span class="text-red-500">*</span></label>
+<input type="text" name="pickupLocation" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" required>
+<p class="text-red-500 text-sm hidden"></p>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Delivery Location <span class="text-red-500">*</span></label>
+<input type="text" name="deliveryLocation" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" required>
+<p class="text-red-500 text-sm hidden"></p>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Package Type <span class="text-red-500">*</span></label>
+<select name="packageType" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" required>
+<option value="">Select Package Type</option>
+<option value="document">Document</option>
+<option value="parcel">Parcel</option>
+<option value="food">Food</option>
+<option value="other">Other</option>
+</select>
+<p class="text-red-500 text-sm hidden"></p>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Package Description</label>
+<textarea name="packageDescription" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" rows="2"></textarea>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Preferred Delivery Time <span class="text-red-500">*</span></label>
+<input type="datetime-local" name="deliveryTime" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" required min="">
+<p class="text-red-500 text-sm hidden"></p>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Contact Number <span class="text-red-500">*</span></label>
+<input type="tel" name="contactNumber" pattern="[0-9]{10}" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" required placeholder="e.g. 0712345678">
+<p class="text-red-500 text-sm hidden"></p>
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Additional Notes</label>
+<textarea name="notes" class="w-full px-4 py-2 border rounded-button focus:outline-none focus:border-primary" rows="2"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap flex items-center justify-center" id="submitBtn">
+<span>Submit Request</span>
+<div class="hidden ml-2" id="loadingSpinner">
+<i class="ri-loader-4-line animate-spin"></i>
+</div>
+</button>
+</form>
+</div>
+</div>
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+<div class="bg-white rounded-lg p-8 max-w-md w-full text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line ri-2x text-green-500"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">Request Submitted!</h3>
+<p class="text-gray-600 mb-6">Your delivery request has been successfully submitted. We'll contact you shortly to confirm the details.</p>
+<button onclick="hideSuccessModal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap">
+Close
+</button>
+</div>
+</div>
+<script>
+function showRequestForm() {
+document.getElementById('requestFormModal').classList.remove('hidden');
+const deliveryTimeInput = document.querySelector('input[name="deliveryTime"]');
+const now = new Date();
+now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+deliveryTimeInput.min = now.toISOString().slice(0, 16);
+}
+function hideRequestForm() {
+document.getElementById('requestFormModal').classList.add('hidden');
+document.getElementById('requestForm').reset();
+document.querySelectorAll('#requestForm .text-red-500').forEach(el => el.classList.add('hidden'));
+}
+function showSuccessModal() {
+document.getElementById('successModal').classList.remove('hidden');
+}
+function hideSuccessModal() {
+document.getElementById('successModal').classList.add('hidden');
+}
+function validateForm(form) {
+let isValid = true;
+const requiredFields = form.querySelectorAll('[required]');
+requiredFields.forEach(field => {
+const errorMessage = field.nextElementSibling;
+if (!field.value.trim()) {
+errorMessage.textContent = 'This field is required';
+errorMessage.classList.remove('hidden');
+isValid = false;
+} else {
+errorMessage.classList.add('hidden');
+if (field.name === 'contactNumber' && !field.value.match(/^[0-9]{10}$/)) {
+errorMessage.textContent = 'Please enter a valid 10-digit phone number';
+errorMessage.classList.remove('hidden');
+isValid = false;
+}
+if (field.name === 'deliveryTime') {
+const selectedTime = new Date(field.value);
+const now = new Date();
+if (selectedTime < now) {
+errorMessage.textContent = 'Please select a future date and time';
+errorMessage.classList.remove('hidden');
+isValid = false;
+}
+}
+}
+});
+return isValid;
+}
+document.getElementById('requestForm').addEventListener('submit', async function(e) {
+e.preventDefault();
+if (!validateForm(this)) return;
+const submitBtn = document.getElementById('submitBtn');
+const loadingSpinner = document.getElementById('loadingSpinner');
+const btnText = submitBtn.querySelector('span');
+submitBtn.disabled = true;
+btnText.textContent = 'Submitting...';
+loadingSpinner.classList.remove('hidden');
+try {
+await new Promise(resolve => setTimeout(resolve, 1500));
+hideRequestForm();
+showSuccessModal();
+} catch (error) {
+console.error('Error submitting form:', error);
+} finally {
+submitBtn.disabled = false;
+btnText.textContent = 'Submit Request';
+loadingSpinner.classList.add('hidden');
+}
+});
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
+successMessage.textContent = 'Thank you for your message. We will get back to you soon!';
+document.body.appendChild(successMessage);
+setTimeout(() => successMessage.remove(), 3000);
+this.reset();
+});
+</script>
+</body>
+</html>
